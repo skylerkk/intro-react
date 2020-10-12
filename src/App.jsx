@@ -34,6 +34,11 @@ class App extends React.Component {
   }
 
   /*Write an addStudent method here*/
+  addStudent(studentName) {
+    this.setState({
+      students: this.student.concat(studentName)
+    });
+  }
 
   addGrade(assignment, student, score) {
     let grades = this.state.grades;
@@ -90,7 +95,7 @@ class App extends React.Component {
       <div>
         <div className="Box Box--spacious f4">
           <div className="Box-header">
-          <h3 className="Box-title d-flex flex-justify-center">GradeBook</h3>
+            <h3 className="Box-title d-flex flex-justify-center">GradeBook</h3>
           </div>
         </div>
         <nav className="UnderlineNav d-flex flex-justify-center">
